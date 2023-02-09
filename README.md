@@ -16,6 +16,17 @@ Everything is inside a single UGLY file for the sole purpose of having a simple 
 - EXAMPLE_ESP_WIFI_PASS
 - EXAMPLE_ESP_WIFI_SSID
 
+## How to RUN the project
+
+clone this repo, and execute this commands
+- cd esp32-camera-boilerplate-opencv
+- cd examples
+- idf.py set-target esp32
+- idf.py build
+- esptool.py -p /dev/tty.PORT -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size 4MB --flash_freq 80m 0x1000 build/bootloader/bootloader.bin 0x10000 build/partition_table/partition-table.bin 0x20000 build/camera_example.bin
+
+Enjoy!
+
 ### Supported Sensor
 
 | model   | max resolution | color type | output format                                                | Len Size |
