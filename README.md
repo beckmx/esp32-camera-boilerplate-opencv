@@ -18,7 +18,7 @@ Everything is inside a single UGLY file for the sole purpose of having a simple 
 
 ## How to RUN the project
 
-clone this repo, and execute this commands
+clone this repo, and execute these commands
 - cd esp32-camera-boilerplate-opencv
 - cd examples
 - idf.py set-target esp32
